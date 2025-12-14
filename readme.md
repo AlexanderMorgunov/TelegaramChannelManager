@@ -67,6 +67,10 @@ telegram-channel-manager/
 2. Сохраните все файлы в соответствующие папки
 3. Откройте файл `index.html` в любом браузере
 
+## Деплой
+
+https://alexandermorgunov.github.io/TelegaramChannelManager/
+
 ## Возможности
 
 - **Адаптивный дизайн** - Корректно отображается на различных устройствах
