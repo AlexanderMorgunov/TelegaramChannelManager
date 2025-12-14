@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Управление каналами Telegram</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Управление каналами Telegram</h1>
+        <div class="search-add">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Поиск по названию, телефону, ID..."
+          />
+          <button class="add-channel-btn">+ Добавить канал</button>
+        </div>
+      </header>
+      <main class="main-content">
+        <table class="channels-table">
+          <thead>
+            <tr>
+              <th>Название</th>
+              <th>Воронка и этап</th>
+              <th>Данные аккаунта</th>
+              <th>Статус</th>
+              <th>Действие</th>
+            </tr>
+          </thead>
+          <tbody id="channels-list">
+            <!-- Каналы будут добавляться динамически -->
+          </tbody>
+        </table>
+      </main>
+    </div>
+
+    <!-- Модальное окно для добавления/редактирования канала -->
+    <div class="modal-overlay" id="channel-modal">
+      <div class="modal">
+        <div class="modal-header">
+          <h2 id="modal-title">Добавить новый канал</h2>
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="qr-container">
+            <div class="channel-number">
+              Канал №<span id="channel-id-display">150511</span>
+            </div>
+            <div class="qr-code" id="qr-code"></div>
+            <div class="qr-instructions">
+              <p><strong>Статус: отсканируйте QR</strong></p>
+              <ol>
+                <li>Откройте Telegram</li>
+                <li>Выберите связанные устройства</li>
+                <li>Выберите добавить новое устройство</li>
+                <li>Наведите камеру на QR-код</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="modal-save-btn" class="save-channel-btn">
+            Сохранить
+          </button>
+          <button class="cancel-btn">Отмена</button>
+        </div>
+      </div>
+    </div>
+    <script src="dataManager.js" defer></script>
+    <script src="uiManager.js" defer></script>
+    <script src="utils.js" defer></script>
+    <script src="eventManager.js" defer></script>
+    <script src="main.js" defer></script>
+  </body>
+</html>
